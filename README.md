@@ -35,7 +35,7 @@ Design a versatile system for delivering railway information in desired Indian l
 **Work Allocation:**
 - The project consists of modules, each with specific responsibilities and collaborations.
 
-**Data Flow:**
+# Data Flow:
 - Data flows through the following stages:
   1. User Language Selection
   2. Input (Voice or Text)
@@ -44,6 +44,101 @@ Design a versatile system for delivering railway information in desired Indian l
   5. Real-time Translation
   6. Content Delivery (IVRS, Chatbots, Web)
   7. User Interaction
+
+```
+Start
+ |
+ v
+User Language Selection
+ | (User selects their preferred language)
+ v
+Input Method (Voice or Text)
+ | (User chooses to input via voice or text)
+ v
+   /----------------------\
+   |                      |
+   | Voice Input           |-----> Voice Recognition (Azure Cognitive Services - Azure Speech Service)
+   | (Speech-to-Text)     /         (Language Detection)
+   |                      |   
+   \----------------------/
+ | (User provides voice input)
+ v
+   /-------------------\
+   |                   |
+   | Text Input         |
+   |                   |
+   \-------------------/
+ | (User provides text input)
+ v
+Translation/Transliteration/Transcription Request
+ | (User requests translation/transliteration/transcription)
+ v
+Azure Cognitive Services
+ | (Leverages Azure services for advanced processing)
+ v
+   /-----------------------\
+   |                       |
+   | Translation Module   |-----> Translation Services (Azure Cognitive Services - Azure Translator Service)
+   |                       |       (Handles translation between languages)
+   \-----------------------/
+ v
+   /-----------------------\
+   |                       |
+   | Transliteration      |-----> Transliteration Services (Azure Cognitive Services - Custom Transliteration Engine)
+   |                       |       (Converts text from one script to another)
+   \-----------------------/
+ v
+   /-----------------------\
+   |                       |
+   | Transcription Module |-----> Transcription Services (Azure Cognitive Services - Azure Speech Service)
+   |                       |       (Converts voice to text)
+   \-----------------------/
+ v
+Data Handling
+ | (Manages JSON files for translations, transliterations, and transcriptions)
+ v
+JSON File Transfer
+ | (Facilitates the transfer of JSON files for storage and retrieval)
+ v
+   /----------------------\
+   |                      |
+   | IVRS                 |
+   | (Voice)              |-----> User Interaction
+   |                      |
+   \----------------------/
+ | (Translated voice announcement)
+ v
+   /----------------------\
+   |                      |
+   | Chatbots             |
+   | (Text)               |-----> User Interaction
+   |                      |
+   \----------------------/
+ | (Translated text chat responses)
+ v
+   /----------------------\
+   |                      |
+   | Web                  |
+   | (Text)               |-----> User Interaction
+   |                      |
+   \----------------------/
+ | (Translated web content)
+ v
+End
+```
+
+In this highly detailed flowchart:
+
+- Users begin by selecting their preferred language and input method.
+- Voice input undergoes speech-to-text conversion and language detection using Azure Cognitive Services (Azure Speech Service).
+- Text input is directly processed.
+- Users can request translation, transliteration, or transcription.
+- Azure Cognitive Services (Azure Translator Service, Custom Transliteration Engine, Azure Speech Service) handle voice recognition, language detection, translation, transliteration, and transcription.
+- Translated voice announcements, text chat responses, and web content are delivered to users.
+- Data handling encompasses JSON files for storing and retrieving translations, transliterations, and transcriptions.
+- JSON file transfer ensures seamless data exchange between modules.
+
+This comprehensive flowchart provides a detailed view of the project's complex data flow and interaction with Azure Cognitive Services, emphasizing translation, transliteration, and transcription processes.
 
 **List of Modules with Information and Ownership:**
 
