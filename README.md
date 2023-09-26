@@ -129,7 +129,7 @@ In this highly detailed flowchart:
 - Voice input undergoes speech-to-text conversion and language detection using Azure Cognitive Services (Azure Speech Service).
 - Text input is directly processed.
 - Users can request translation, transliteration, or transcription.
-- Azure Cognitive Services (Azure Translator Service, Custom Transliteration Engine, Azure Speech Service) handle voice recognition, language detection, translation, transliteration, and transcription.
+- Azure Cognitive Services (Azure Translator Service, Custom Transliteration Engine, Azure Speech Service) handle voice recognition, language detection, translation, transliteration, and transcription processes.
 - Translated voice announcements, text chat responses, and web content are delivered to users.
 - Data handling encompasses JSON files for storing and retrieving translations, transliterations, and transcriptions.
 - JSON file transfer ensures seamless data exchange between modules.
@@ -177,7 +177,7 @@ Design and Build the Core System
  v
 Enable Language Integration
  | (2nd Team Member)
- | - Implement language APIs for Indian and foreign languages.
+ | - Implement language APIs for Indian languages and foreign languages.
  | - Ensure seamless communication with Language Models Module.
  v
 Optimize Content Delivery for Mobile Devices
@@ -220,7 +220,9 @@ Start
  v
 Conduct Thorough Testing
  | (4th Team Member - Testing and Quality Assurance)
- | - Perform unit, integration, and user acceptance testing.
+ | - Perform
+
+ unit, integration, and user acceptance testing.
  | - Simulate noisy station environments for voice recognition testing.
  v
 Ensure Translation Accuracy and System Reliability
