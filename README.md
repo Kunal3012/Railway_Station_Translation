@@ -52,79 +52,74 @@ Start
  v
 User Language Selection
  | (User selects their preferred language)
- v
+ |
 Input Method (Voice or Text)
  | (User chooses to input via voice or text)
- v
-   /----------------------\
-   |                      |
-   | Voice Input           |-----> Voice Recognition (Azure Cognitive Services - Azure Speech Service)
-   | (Speech-to-Text)     /         (Language Detection)
-   |                      |   
-   \----------------------/
- | (User provides voice input)
- v
-   /-------------------\
-   |                   |
-   | Text Input         |
-   |                   |
-   \-------------------/
- | (User provides text input)
- v
+ |
+ +--------------------------------------+
+ |                                      |
+ | Voice Input                           |-----> Voice Recognition (Azure Cognitive Services - Azure Speech Service)
+ | (Speech-to-Text)                     /         (Language Detection)
+ |                                      |   
+ +--------------------------------------+
+ |
+ +-------------------+
+ |                   |
+ | Text Input         |
+ |                   |
+ +-------------------+
+ |
 Translation/Transliteration/Transcription Request
  | (User requests translation/transliteration/transcription)
- v
+ |
 Azure Cognitive Services
  | (Leverages Azure services for advanced processing)
- v
-   /-----------------------\
-   |                       |
-   | Translation Module   |-----> Translation Services (Azure Cognitive Services - Azure Translator Service)
-   |                       |       (Handles translation between languages)
-   \-----------------------/
- v
-   /-----------------------\
-   |                       |
-   | Transliteration      |-----> Transliteration Services (Azure Cognitive Services - Custom Transliteration Engine)
-   |                       |       (Converts text from one script to another)
-   \-----------------------/
- v
-   /-----------------------\
-   |                       |
-   | Transcription Module |-----> Transcription Services (Azure Cognitive Services - Azure Speech Service)
-   |                       |       (Converts voice to text)
-   \-----------------------/
- v
+ |
+ +-----------------------+
+ |                       |
+ | Translation Module   |-----> Translation Services (Azure Cognitive Services - Azure Translator Service)
+ |                       |       (Handles translation between languages)
+ +-----------------------+
+ |
+ +-----------------------+
+ |                       |
+ | Transliteration      |-----> Transliteration Services (Azure Cognitive Services - Custom Transliteration Engine)
+ |                       |       (Converts text from one script to another)
+ +-----------------------+
+ |
+ +-----------------------+
+ |                       |
+ | Transcription Module |-----> Transcription Services (Azure Cognitive Services - Azure Speech Service)
+ |                       |       (Converts voice to text)
+ +-----------------------+
+ |
 Data Handling
  | (Manages JSON files for translations, transliterations, and transcriptions)
- v
+ |
 JSON File Transfer
  | (Facilitates the transfer of JSON files for storage and retrieval)
- v
-   /----------------------\
-   |                      |
-   | IVRS                 |
-   | (Voice)              |-----> User Interaction
-   |                      |
-   \----------------------/
- | (Translated voice announcement)
- v
-   /----------------------\
-   |                      |
-   | Chatbots             |
-   | (Text)               |-----> User Interaction
-   |                      |
-   \----------------------/
- | (Translated text chat responses)
- v
-   /----------------------\
-   |                      |
-   | Web                  |
-   | (Text)               |-----> User Interaction
-   |                      |
-   \----------------------/
- | (Translated web content)
- v
+ |
+ +----------------------+
+ |                      |
+ | IVRS                 |
+ | (Voice)              |-----> User Interaction
+ |                      |
+ +----------------------+
+ |
+ +----------------------+
+ |                      |
+ | Chatbots             |
+ | (Text)               |-----> User Interaction
+ |                      |
+ +----------------------+
+ |
+ +----------------------+
+ |                      |
+ | Web                  |
+ | (Text)               |-----> User Interaction
+ |                      |
+ +----------------------+
+ |
 End
 ```
 
