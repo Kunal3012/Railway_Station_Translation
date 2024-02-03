@@ -289,3 +289,6 @@ End
 These detailed flowcharts provide a comprehensive view of each module's responsibilities, processes, and interactions within the project.
 
 This comprehensive project plan aligns with the Ministry of Railways' vision to provide effective language translation services for railway information dissemination, enhancing passenger experiences and ensuring inclusivity.
+
+
+MIT License 
